@@ -1,9 +1,9 @@
 //use try catch always when using database
 //database is in another continent meaning use async await
 
-import dotenv from "dotenv";
-dotenv.config();
-
+// import dotenv from "dotenv";
+// dotenv.config();
+import "dotenv/config";
 import mongoose from "mongoose";
 import connectDB from "./db/index.js";
 import {app} from "./app.js"

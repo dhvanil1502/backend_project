@@ -24,13 +24,14 @@ const cloudinaryUpload=async (localfilepath)=>{
            }
         )
         console.log("file uploaded on cloudinary",uploadResult.url);
+        return uploadResult;
     }catch(error) {
             fs.unlinkSync(localfilepath)//remove saved file on local saerver as upload failed
            console.log(error);
            return null
     };
     
-    console.log(uploadResult);
+    console.log(uploadResult);  
     
     
 }
@@ -57,3 +58,5 @@ const cloudinaryUpload=async (localfilepath)=>{
     });
     
     console.log(autoCropUrl);    
+
+    export {cloudinaryUpload};  
